@@ -1,0 +1,48 @@
+<div class="container"> 
+  <!-- Contenedor principal para la tabla de compras -->
+  <h2>Resumen de Compra</h2>
+<!-- Muestra la tabla solo si hay items en la lista,
+  de lo contrario muestra un mensaje -->
+  <table class="stiled-table" *ngIf="items.length > 0; else listaVacia"> 
+    <!-- Solo muestra la tabla si hay items en la lista -->
+    <thead>
+      <tr><!-- Encabezados de la tabla -->
+        <th>#</th>
+        
+        <th>Producto</th> <!-- Encabezado de la columna 
+        para el nombre del producto -->
+        <th>Cantidad</th> <!-- Encabezado de la columna para la cantidad -->  
+        <th>Editar</th> <!--Encabezado de la columna para editar-->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let it of items; let i = index"> 
+        <!-- Recorre cada item en la lista y muestra sus datos en la tabla -->
+        <td>{{i+1}}</td>
+        <td>{{ it.producto }}</td><!-- Muestra el nombre del producto -->
+        <td>{{ it.cantidad }}</td><!-- Muestra la cantidad del producto -->
+        <td>
+            <button type="button" (click)="editarItem(i)" class="btn-editar">
+  ✏ Editar
+</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Si no hay items, muestra el mensaje definido en el template listaVacia -->
+  <ng-template #listaVacia> <!-- Template para mostrar cuando la lista está vacía -->
+    <!-- Mensaje para cuando la lista está vacía -->
+    <div class="mensaje-vacio">
+      <!-- Muestra un mensaje cuando la lista está vacía -->
+      <p>No hay productos en la lista.</p>
+    </div>
+  </ng-template>
+
+  <br>
+  <!-- Botón para regresar al formulario, 
+   usando routerLink para navegar a la ruta raíz -->
+ <button routerLink="/" class="btn-regresar"> 
+   <!-- Botón para regresar al formulario -->
+  Volver al Formulario
+</button>
+</div>
