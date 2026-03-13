@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    margin:0;
+    min-height:100vh;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #000000);
+    font-family:'Orbitron', sans-serif;
+}
+
+/* grid futurista */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+        linear-gradient(#ff00ff22 1px, transparent 1px),
+        linear-gradient(90deg, #00ffff22 1px, transparent 1px);
+    background-size:40px 40px;
+    pointer-events:none;
+}

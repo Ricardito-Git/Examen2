@@ -1,71 +1,69 @@
+/* Fondo estilo cyberpunk */
 body{
-    background: #f4f6f8;
-    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    font-family: 'Orbitron', sans-serif;
+    color:#00ffff;
 }
 
-/* Formulario */
+/* Contenedor */
 .form-contenedor{
-    width: 70%;
-    margin: auto;
-    margin-top: 30px;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width:65%;
+    margin:auto;
+    margin-top:50px;
+    background:#0d0d0d;
+    padding:30px;
+    border-radius:10px;
+    border:2px solid #ff00ff;
+    box-shadow:0 0 15px #ff00ff, 0 0 30px #00ffff;
 }
 
 /* Inputs */
 input{
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    background:#000;
+    border:1px solid #00ffff;
+    color:#00ffff;
+    padding:10px;
+    border-radius:5px;
 }
 
-/* Fila de producto */
+/* Fila productos */
 .item-fila{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
 }
 
 /* Botón agregar */
 .btn-agregar{
-    background: #2196F3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
+    background:#ff00ff;
+    border:none;
+    padding:10px 18px;
+    color:white;
+    border-radius:6px;
+    box-shadow:0 0 10px #ff00ff;
+    cursor:pointer;
 }
 
 .btn-agregar:hover{
-    background: #1976D2;
+    background:#ff33ff;
 }
 
 /* Botón eliminar */
 .btn-eliminar{
-    background: #f44336;
-    color: white;
-    border: none;
-    padding: 7px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.btn-eliminar:hover{
-    background: #c62828;
+    background:#ff0033;
+    border:none;
+    padding:8px 12px;
+    color:white;
+    border-radius:6px;
+    box-shadow:0 0 10px #ff0033;
 }
 
 /* Botón ver tabla */
 .btn-ver-tabla{
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.btn-ver-tabla:hover{
-    background: #388E3C;
+    background:#00ffff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    color:black;
+    box-shadow:0 0 10px #00ffff;
 }
